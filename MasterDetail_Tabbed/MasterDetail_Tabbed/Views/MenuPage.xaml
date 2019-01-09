@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetail_Tabbed.Views.MenuPage"
+             Title="Menu">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <ListView x:Name="ListViewMenu"
+                    HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Label Text="{Binding Title}" FontSize="20"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+
+<!--<StackLayout>
+    <StackLayout BackgroundColor="{StaticResource iconGray}" Padding="15"      HeightRequest="100">
+        <Label Text="Image here" HeightRequest="60" HorizontalOptions="Start" VerticalOptions="EndAndExpand" />
+    </StackLayout>
+    <TableView Intent="Form" HasUnevenRows="True">
+        <TableRoot>
+            <TableSection Title="Vancouver Fitness Expo">
+                <ViewCell>
+                    <StackLayout Margin="15, 10, 10, 10" Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MenuSelectedCommand}" CommandParameter="EventTabbedPage/NavigationPage/MainPage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="icon_home_circle" HeightRequest="40"/>
+                        <Label Text="Home" VerticalTextAlignment="Center" Margin="20, 0, 0, 0" Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Margin="15, 10, 10, 10" Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MenuSelectedCommand}" CommandParameter="EventTabbedPage/NavigationEventPage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="icon_sessions_circle" HeightRequest="40"/>
+                        <Label Text="Sessions" VerticalTextAlignment="Center" Margin="20, 0, 0, 0" Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Resources">
+                <ViewCell>
+                    <StackLayout Margin="15, 10, 10, 10" Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MenuSelectedCommand}" CommandParameter="NavigationPage/FloorPlanPage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="icon_floormap_circle" HeightRequest="40"/>
+                        <Label Text="Floor Plan" VerticalTextAlignment="Center" Margin="20, 0, 0, 0" Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Margin="15, 10, 10, 10" Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MenuSelectedCommand}" CommandParameter="NavigationPage/SponsorsPage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="icon_partners_circle" HeightRequest="40"/>
+                        <Label Text="Sponsor / Media Partners" VerticalTextAlignment="Center" Margin="20, 0, 0, 0" Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Margin="15, 10, 10, 10" Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MenuSelectedCommand}" CommandParameter="NavigationPage/FoodNearbyPage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="icon_restaurant_circle" HeightRequest="40"/>
+                        <Label Text="Where To Eat" VerticalTextAlignment="Center" Margin="20, 0, 0, 0" Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</StackLayout>-->
